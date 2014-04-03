@@ -78,7 +78,6 @@ header {
 
   a {
     color: #ccc;
-
     font-family: $header-font-family;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -88,17 +87,47 @@ header {
     color: #fff;
   }
 
-  > section.left {
-    margin-left: 5rem;
-
-    font-size: $h3-font-size;
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
   }
 
-  > section.right {
-    margin-right: 5rem;
+  .left {
+    margin-left: 5rem;
+    font-size: $h3-font-size;
+    @include transition(0.5s);
+  }
 
-    > a + a {
-      margin-left: 2rem;
+  .right {
+    margin-right: 5rem;
+  }
+
+  @media #{$small-only} {
+    .left {
+      margin-left: 1rem;
+    }
+
+    .right {
+      margin-right: 1rem;
+      
+      .menu-items {
+        display: none;
+      }
+    }
+  }
+
+  @media #{$medium-up} {
+    .right {
+      .menu-button {
+        display: none;
+      }
+    
+      .menu-items a + a {
+        margin-left: 2rem;
+      }
     }
   }
 }
