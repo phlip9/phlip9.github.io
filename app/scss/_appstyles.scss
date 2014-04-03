@@ -62,6 +62,49 @@ $header-height: 5rem;
   animation-iteration-count: $iteration;
 }
 
+@mixin phone($height, $width, $phone-color, $background-color) {
+  .phone {
+    height: $height;
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+
+    .outline {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: $phone-color;
+      border-radius: 4.0rem/2.5rem;
+
+      .speaker {
+        height: 6%;
+        padding-top: 1.5rem;
+        margin-bottom: 2rem;
+
+        .speaker-outline {
+          width: 20%;
+          height: 100%;
+          margin: auto;
+          border-radius: 2px;
+          background-color: $background-color;
+        }
+      }
+
+      .content {
+        height: 75%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $background-color;
+        overflow: hidden;
+
+        @content;
+      }
+    }
+  }
+}
+
 a {
   @include transition(0.25s);
 }
@@ -205,17 +248,52 @@ section.splash {
 }
 
 .dhi {
-  background-color: #2b3a42;
-  padding-top: 10rem;
+  $background-color: #2b3a42;
+  $content-color: #bdd4de;
+
+  background-color: $background-color;
+
+  hr {
+    border-color: $content-color;
+  }
 
   h1, h2, h3, h4, h5 {
     color: #fff;
   }
 
   p {
-    color: #bdd4de;
+    color: $content-color;
   }
 
+  a {
+    color: #00bcef;
+
+    &:hover {
+     color: #008cba;
+    }
+  }
+
+  @include phone(40rem, 20rem, rgba(37, 34, 35, 0.5), $background-color);
+}
+
+.fowinks {
+  $background-color: #bdd4de;
+  
+  background-color: #bdd4de;
+
+  hr {
+    border-color: #999;
+  }
+
+  a {
+    color: #005cda;
+
+    &:hover {
+      color: #009efe;
+    }
+  }
+
+  @include phone(35rem, 20rem, rgba(37, 34, 35, 0.5), $background-color);
 }
 
 .showcase {
@@ -224,18 +302,24 @@ section.splash {
 
   .details {
     @extend .small-12;
+    @extend .medium-6;
     @extend .large-6;
     @extend .columns;
     
-    text-align: center;
+    text-align: left;
 
-    @media #{$large-up} {
+    @media #{$small-only} {
+      margin-bottom: 4rem;
+    }
+
+    @media #{$medium-up} {
       text-align: right;
     }
   }
 
   .work {
     @extend .small-12;
+    @extend .medium-6;
     @extend .large-5;
     @extend .large-offset-1;
     @extend .columns;
