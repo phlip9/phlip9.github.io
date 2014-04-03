@@ -1,1 +1,173 @@
 /* all app scss styles here */
+
+$header-height: 5rem;
+
+@mixin transition($length) {
+  -webkit-transition: $length;
+     -moz-transition: $length;
+       -o-transition: $length;
+          transition: $length;
+}
+
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+     -moz-background-size: $size;
+       -o-background-size: $size;
+          background-size: $size;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -mox-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+
+@mixin keyframe($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+// sample usage:
+// @include animation(some-animation, 2s, ease-out, infinite);
+@mixin animation($animation, $duration, $transition, $iteration) {
+  -webkit-animation-name: $animation;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $transition;
+  -webkit-animation-iteration-count: $iteration;
+
+  -moz-animation-name: $animation;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $transition;
+  -moz-animation-iteration-count: $iteration;
+
+  -o-animation-name: $animation;
+  -o-animation-duration: $duration;
+  -o-animation-timing-function: $transition;
+  -o-animation-iteration-count: $iteration;
+
+  animation-name: $animation;
+  animation-duration: $duration;
+  animation-timing-function: $transition;
+  animation-iteration-count: $iteration;
+}
+
+a {
+  @include transition(0.25s);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  display: block;
+  width: 100%;
+  height: $header-height;
+  line-height: $header-height;
+
+  a {
+    color: #ccc;
+
+    font-family: $header-font-family;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  > section.left {
+    margin-left: 5rem;
+
+    font-size: $h3-font-size;
+  }
+
+  > section.right {
+    margin-right: 5rem;
+
+    > a + a {
+      margin-left: 2rem;
+    }
+  }
+}
+
+section.splash {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  text-align: center;
+
+  .background-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url("../images/background.jpg") no-repeat center center;
+    @include background-size(cover);
+  }
+
+  > div {
+      display: table-cell;
+      vertical-align: middle;
+      margin-top: 0;
+      margin-bottom: 0;
+      float: none;
+  }
+
+  > div.row {
+    position: relative;
+    z-index: 2;
+
+    * {
+      color: #e8e8e8;
+    }
+
+    > h1 {
+      letter-spacing: 6px;
+    }
+
+    > h5 {
+      letter-spacing: 2px;
+    }
+  }
+
+  > a.go-down {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 3rem;
+    color: #fff;
+    opacity: 0.8;
+
+    > i {
+      @include transition(0.5s);
+    }
+  }
+
+  > a.go-down:hover {
+    opacity: 1.0;
+  }
+
+  > a.go-down:hover i {
+    @include transform(translateY(0.5rem));
+  }
+}
+
