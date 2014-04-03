@@ -204,3 +204,45 @@ section.splash {
   }
 }
 
+.dhi {
+  background-color: #2b3a42;
+  padding-top: 10rem;
+
+  h1, h2, h3, h4, h5 {
+    color: #fff;
+  }
+
+  p {
+    color: #bdd4de;
+  }
+
+}
+
+.showcase {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  .details {
+    @extend .small-12;
+    @extend .large-6;
+    @extend .columns;
+    
+    text-align: center;
+
+    @media #{$large-up} {
+      text-align: right;
+    }
+  }
+
+  .work {
+    @extend .small-12;
+    @extend .large-5;
+    @extend .large-offset-1;
+    @extend .columns;
+  }
+}
+
+.bullet {
+  color: #6e686a;
+}
+
