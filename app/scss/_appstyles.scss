@@ -164,14 +164,18 @@ section.splash {
     z-index: 2;
 
     * {
-      color: #e8e8e8;
+      @include transition(0.5s);
     }
 
     > h1 {
+      color: #fff;
       letter-spacing: 6px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     > h5 {
+      color: #ccc;
       letter-spacing: 2px;
     }
   }
