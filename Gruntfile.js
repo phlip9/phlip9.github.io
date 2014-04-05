@@ -15,7 +15,8 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'extended'
+          outputStyle: 'compressed',
+          sourceComments: 'none'
         },
         files: {
           '<%= app %>/css/app.css': '<%= app %>/scss/app.scss'
@@ -66,8 +67,9 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        preserveComments: 'some',
-        mangle: false
+        preserveComments: 'none',
+        mangle: true,
+        compress: true
       }
     },
 
