@@ -1,15 +1,15 @@
 {
-  "name": "zf5_project",
-  "description": "",
+  "name": "phlip9.com",
+  "description": "My personal website / portfolio.",
   "version": "0.0.1",
-  "homepage": "",
+  "homepage": "http://phlip9.com",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Philip Hayes",
+    "email": "philip@phlip9.com"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/phlip9/phlip9.com"
   },
   "devDependencies": {
     "node-sass": "~0.8.3",
@@ -24,6 +24,8 @@
     "grunt-contrib-connect": "~0.7.1",
     "grunt-bower-install": "~1.3.0",
     "grunt-usemin": "~2.1.0",
-    "grunt-sass": "~0.11.0"
+    "grunt-sass": "~0.11.0",
+    "grunt-uncss": "^0.3.3",
+    "grunt-contrib-imagemin": "^0.6.1"
   }
 }

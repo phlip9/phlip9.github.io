@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd:'<%= app %>/',
-          src: ['images/**', 'fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
+          src: ['fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
           dest: '<%= dist %>/'
         } , {
           expand: true,
@@ -141,6 +141,44 @@ module.exports = function(grunt) {
           'unslider'
         ]
       }
+    },
+
+    uncss: {
+      dist: {
+        options: {
+          ignore: [
+            'header.menu-open',
+            'header.menu-open .menu',
+            'header.menu-open .menu .menu-button',
+            'header.menu-open .menu .menu-items',
+            'header.menu-open .menu .menu-items a',
+
+            '.phone-slider .dots',
+            '.phone-slider .dots li',
+            '.phone-slider .dots li.active',
+
+            '#google-code-in .dots li',
+            '#google-code-in .dots li.active'
+          ]
+        },
+        files: {
+          '<%= dist %>/css/app.min.css': '<%= dist %>/index.html'
+        }
+      }
+    },
+    
+    imagemin: {
+      dist: {
+        options: {
+          pngquant: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= app %>/images',
+          src: '{,*/}*.{gif,jpeg,jpg,png}',
+          dest: '<%= dist %>/images'
+        }]
+      }
     }
 
   });
@@ -156,12 +194,18 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-bower-install');
+  grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   grunt.registerTask('compile-sass', ['sass']);
   grunt.registerTask('bower-install', ['bowerInstall']);
   grunt.registerTask('default', ['compile-sass', 'copy:app', 'bower-install', 'connect:app', 'watch']);
   grunt.registerTask('validate-js', ['jshint']);
   grunt.registerTask('server-dist', ['connect:dist']);
-  grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'concat', 'cssmin', 'uglify', 'usemin']);
+  grunt.registerTask('publish', [
+    'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist',
+    'imagemin:dist', 'concat', 'cssmin', 'uglify', 'usemin', 'uncss:dist'
+  ]);
 
 };
+
