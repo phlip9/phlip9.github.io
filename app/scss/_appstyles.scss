@@ -317,6 +317,10 @@ header {
     bottom: 0;
     z-index: 1;
     background: url("../images/background.jpg") no-repeat center center;
+
+    //fallback color
+    background-color: $dark-gray;
+
     @include background-size(cover);
   }
 
