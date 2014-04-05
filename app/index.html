@@ -17,24 +17,25 @@
 </head>
 <body>
   <header>
-    <div class="background"></div>
-    <div class="left">
-      <a href="#">Philip Hayes</a>
+    <div class="title">
+      <a data-scroll href="#splash">Philip Hayes</a>
     </div>
-    <div class="right">
+    <div class="menu">
       <div class="menu-button">
-        <a href="#"><i class="fa fa-bars"></i> Menu</a>
+        <a><i class="fa fa-bars"></i> Menu</a>
       </div>
       <div class="menu-items">
-        <a href="#">Home</a>
-        <a href="#">Work</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a data-scroll href="#splash">Home</a>
+        <a data-scroll href="#dhi">Work</a>
+        <a data-scroll href="#about">About</a>
+        <a data-scroll href="#contact">Contact</a>
+        <a href="http://github.com/phlip9">Github</a>
+        <a href="http://www.linkedin.com/pub/philip-hayes/54/8a4/264/">LinkedIn</a>
       </div>
     </div>
   </header>
 
-  <section class="splash">
+  <section id="splash">
     <div class="background-img"></div>
     <div class="row">
       <h5>Hi, my name's</h5>
@@ -47,15 +48,22 @@
          Backend developer
       </h5>
     </div>
-    <a href="" class="go-down">
-      <i class="fa fa-chevron-down fa-2x"></i> 
-    </a>
+    <div class="splash-down">
+      <a data-scroll href="#dhi" class="go-down">
+        <i class="fa fa-chevron-down fa-2x"></i> 
+      </a>
+    </div>
   </section>
 
-  <section class="dhi showcase">
+  <section id="dhi" class="showcase">
+    <div class="row work-title">
+      <h1>
+        Work
+      </h1>
+    </div>
     <div class="row">
       <div class="details">
-        <h3>APB App</h3>
+        <h3>Chemical Safety App</h3>
         <hr>
         <h5>Interned for</h5>
         <p><a href="http://dhigroup.com">DHI Group International</a> 
@@ -65,8 +73,8 @@
         <p>
           DHI's chemical engineers found it cumbersome to carry around hefty,
           oversized Material Safety Data Sheets (MSDS) and wanted to be able to
-          browse through the company's collection quickly and easily on their
-          smart phones.
+          browse through the company's collection of chemical safety sheets 
+          quickly and easily on their smart phones.
         </p>
         <h5>The solution</h5>
         <p>
@@ -79,7 +87,8 @@
           and Windows Phone with a single code base. I then wrote a 
           <a href="https://www.djangoproject.com/">django</a> + 
           <a href="http://www.postgresql.org/">PostgreSQL</a> database backend
-          to store, access, and modify the data sheets.
+          to store, access, and modify the data sheets through a REST API and
+          user-friendly admin interface.
         </p>
       </div>
       <div class="work">
@@ -89,8 +98,18 @@
               <div class="speaker-outline"></div>
             </div>
             <div class="content">
-              <div>
-                <img src="images/oi-file-manager_1.png" />
+              <div class="phone-slider">
+                <ul>
+                  <li>
+                    <img src="images/apb_1.png" />
+                  </li>
+                  <li>
+                    <img src="images/apb_2.png" />
+                  </li>
+                  <li>
+                    <img src="images/apb_3.png" />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -99,7 +118,7 @@
     </div>
   </section>
 
-  <section class="fowinks showcase">
+  <section id="fowinks" class="showcase">
     <div class="row">
       <div class="details">
         <h3>Sleep Survey Web App</h3>
@@ -107,7 +126,8 @@
         <h5>Interned for</h5>
         <p><a href="http://41winks.org">41Winks Organization</a>
           <span class="bullet">•</span> Menlo Park,
-        California <span class="bullet">•</span> 1 month</p>
+          California <span class="bullet">•</span> 1 month
+        </p>
         <h5>The problem</h5>
         <p>
           Nearly 70 million Americans suffer from chronic sleep disorders such as
@@ -117,12 +137,12 @@
         <h5>The solution</h5>
         <p>
           I wrote a survey web app for patients and doctors to diagnose potential
-          sleep disorders. Researchers also use the app to gather data for their
-          research. The frontent was developed in good 'ole HTML/CSS/JS with
+          sleep disorders. A number of Stanford researchers use the app to gather
+          data for further study. The frontent was developed in HTML/CSS/JS with
           <a href="http://angularjs.org/">AngularJS</a> as the MV* framework
           and <a href="http://topcoat.io/">Topcoat</a> for basic mobile styles.
-          The backend was developed using
-          <a href="http://flask.pocoo.org/">Flask</a>.
+          The backend was developed in Python using the
+          <a href="http://flask.pocoo.org/">Flask</a> web framework.
         </p>
       </div>
       <div class="work">
@@ -132,7 +152,19 @@
               <div class="speaker-outline"></div>
             </div>
             <div class="content">
-
+              <div class="phone-slider">
+                <ul>
+                  <li>
+                    <img src="images/41winks_1.png" />
+                  </li>
+                  <li>
+                    <img src="images/41winks_2.png" />
+                  </li>
+                  <li>
+                    <img src="images/41winks_3.png" />
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -140,11 +172,150 @@
     </div>
   </section>
 
+  <section id="google-code-in" class="showcase">
+    <div class="row">
+      <div class="details">
+        <h3>Google Code-In</h3>
+        <hr>
+        <h5>OI File Manager</h5>
+        <p>
+          <a href="http://openintents.org">OpenIntents Organization</a>
+          <span class="bullet">•</span> Winter 2011-2012
+        </p>
+        <p>
+          I volunteered for the open source organization OpenInstents where I
+          worked on their Android app, OI File Manager. The goal was to write
+          unit tests, fix bugs, and implement features during the Google Code-In
+          competition to gain points.
+        </p>
+        <p>
+          Languages & Frameworks: Java, C, Android
+        </p>
+        <h5>NetBSD</h5>
+        <p>
+          <a href="http://netbsd.org">NetBSD Organization</a>
+          <span class="bullet">•</span> Winter 2012-2013
+        </p>
+        <p>
+          During the 2012-2013 Google Code-In competition, I worked for NetBSD,
+          a Unix-like, open source operating system. I wrote ATF (automatic
+          test framework) tests for libc and the NetBSD kernel, fixed bugs,
+          maintained pkgsrc packages, and lurked IRC.
+        </p>
+        <p>
+          Languages & Frameworks: C
+        </p>
+      </div>
+      <div class="work">
+        <div class="phone">
+          <div class="outline">
+            <div class="speaker">
+              <div class="speaker-outline"></div>
+            </div>
+            <div class="content">
+              <div class="phone-slider">
+                <ul>
+                  <li>
+                    <img src="images/oi-file-manager_2_1.png" />
+                  </li>
+                  <li>
+                    <img src="images/oi-file-manager_2_2.png" />
+                  </li>
+                  <li>
+                    <img src="images/oi-file-manager_2_3.png" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="row">
+      <div class="title">
+        <h1>About me</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="pic-col">
+        <img src="images/profile.png" />
+      </div>
+      <div class="desc-col">
+        <p>
+          My name's Philip, an 18 year old guy living in Los Angeles. I'll be
+          attending UC Berkeley College of Engineering or Pomona College in
+          the fall (I have yet to decide). I love pushing code, designing
+          beautiful websites, and solving problems in unique, elegant, and
+          efficient ways.
+        </p>
+        <p>
+          When I'm not staring at the computer, you'll find me running with
+          the Cross-Country team, competing in hackathons (So far, I've
+          competed in the Silicon Beach Fest, the Biannual 5C Hackathon, and
+          CalTech's Startup Weekend), solving Project Euler problems, messing
+          with my 3D printer, and watching anime.
+        </p>
+        <p>
+          On the computer, however, I'm reading about the latest startup
+          hype, perfecting my dotfiles, and reading anything from Typography
+          and Graphic Design to Compilers and Algorithms to Hacking and Reverse
+          Engineering. I also enjoy contributing to the greater programming
+          community by writing tests, fixing bugs, and implementing features for
+          my favorite open source projects.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="row">
+      <div class="col">
+        <h5>Email</h5>
+        <hr>
+        <p>
+          Questions? Comments?
+          <br>
+          <a href="mailto:philip@phlip9.com">philip@phlip9.com</a>
+        </p>
+      </div>
+      <div class="col">
+        <h5>Phone</h5>
+        <hr>
+        <p>
+          Send me a text or something!
+          <br>
+          <a href="tel:18184346222">+1 818 434 6222</a>
+        </p>
+      </div>
+      <div class="col">
+        <h5>Social</h5>
+        <hr>
+        <p>
+          <a href="http://github.com/phlip9">Code with me on github.</a>
+          <br>
+          <a href="http://www.linkedin.com/pub/philip-hayes/54/8a4/264/">Check out my LinkedIn.</a>
+        </p>
+      </div>
+    </div>
+    <div class="row copyright">
+      <p>
+        <a href="">See the site's source on github!</a>
+        <br>
+        © 2014 Philip Hayes
+      </p>
+    </div>
+  </footer>
+
   <!-- build:js js/vendor/libraries.min.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/fastclick/lib/fastclick.js"></script>
   <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/unslider/src/unslider.js"></script>
+  <script src="bower_components/smooth-scroll.js/smooth-scroll.js"></script>
   <!--<script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>-->
   <!--<script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>-->
   <!--<script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>-->

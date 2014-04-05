@@ -1,25 +1,47 @@
 var app = (function(document, $) {
+  'use strict';
+  var docElem = document.documentElement,
 
-	'use strict';
-	var docElem = document.documentElement,
+  _userAgentInit = function() {
+    docElem.setAttribute('data-useragent', navigator.userAgent);
+  },
+  _init = function() {
+    $(document).foundation();
+    _userAgentInit();
+  };
 
-		_userAgentInit = function() {
-			docElem.setAttribute('data-useragent', navigator.userAgent);
-		},
-		_init = function() {
-			$(document).foundation();
-			_userAgentInit();
-		};
+  return {
+    init: _init
+  };
+}(document, jQuery));
 
-	return {
-		init: _init
-	};
+(function($, smoothScroll) {
+  'use strict';
+  app.init();
 
-})(document, jQuery);
+  smoothScroll.init();
 
-(function() {
+  $('.phone-slider').each(function (i, e) {
+    var slider = $(e).unslider({
+      speed: 500,
+      delay: 5000,
+      keys: true,
+      dots: true,
+      fluid: false
+    });
 
-	'use strict';
-	app.init();
+    $(slider).click(function() {
+      slider.data('unslider').next();
+    });
 
-})();
+  });
+
+  $('.menu-button').click(function () {
+    $('header').toggleClass('menu-open');
+  });
+
+  $('a', '.menu-items').click(function () {
+    $('header').removeClass('menu-open');
+  });
+}(jQuery, smoothScroll));
+

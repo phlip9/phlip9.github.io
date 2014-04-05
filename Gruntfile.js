@@ -135,7 +135,8 @@ module.exports = function(grunt) {
           'font-awesome',
           'jquery-placeholder',
           'jquery.cookie',
-          'foundation'
+          'foundation',
+          'unslider'
         ]
       }
     }

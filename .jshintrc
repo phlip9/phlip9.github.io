@@ -13,6 +13,11 @@
 	"quotmark": "single",
 	"globals": {
 		"jQuery": false,
-		"$": false
+		"$": false,
+    "window": false,
+    "document": false,
+    "navigator": false,
+    "smoothScroll": false,
+    "foundation": false
 	}
 }

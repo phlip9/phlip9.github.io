@@ -1,12 +1,38 @@
-/* all app scss styles here */
+// variables
 
+// colors
+$dark-teal-blue: #2b3a42;
+$ocean-blue: #3f5765;
+$azur-blue: #02535e;
+$sky-blue: #bdd4de;
+$almost-white: #efefef;
+$dark-gray: #262324;
+$gray: #504d50;
+
+$text-color: #333;
+$header-color: #222;
+$link-color: #005cda;
+$hover-link-color: #009efe;
+
+$inverted-text-color: #bdd4de;
+$inverted-header-color: #efefef;
+$inverted-link-color: #00bcef;
+$inverted-hover-link-color: #008cba;
+
+$bullet-color: rgba(220, 210, 215, 0.5);
+
+$header-background-color: rgba(0, 0, 0, 0.8);
+
+// layout
 $header-height: 5rem;
+$menu-item-height: 3rem;
 
-@mixin transition($length) {
-  -webkit-transition: $length;
-     -moz-transition: $length;
-       -o-transition: $length;
-          transition: $length;
+// mixins
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
 }
 
 @mixin background-size($size) {
@@ -23,90 +49,157 @@ $header-height: 5rem;
           transform: $transform;
 }
 
-@mixin keyframe($animation-name) {
-  @-webkit-keyframes $animation-name {
-    @content;
-  }
-  @-moz-keyframes $animation-name {
-    @content;
-  }
-  @-o-keyframes $animation-name {
-    @content;
-  }
-  @keyframes $animation-name {
-    @content;
-  }
-}
-
-// sample usage:
-// @include animation(some-animation, 2s, ease-out, infinite);
-@mixin animation($animation, $duration, $transition, $iteration) {
-  -webkit-animation-name: $animation;
-  -webkit-animation-duration: $duration;
-  -webkit-animation-timing-function: $transition;
-  -webkit-animation-iteration-count: $iteration;
-
-  -moz-animation-name: $animation;
-  -moz-animation-duration: $duration;
-  -moz-animation-timing-function: $transition;
-  -moz-animation-iteration-count: $iteration;
-
-  -o-animation-name: $animation;
-  -o-animation-duration: $duration;
-  -o-animation-timing-function: $transition;
-  -o-animation-iteration-count: $iteration;
-
-  animation-name: $animation;
-  animation-duration: $duration;
-  animation-timing-function: $transition;
-  animation-iteration-count: $iteration;
+@mixin filter($filter) {
+  -webkit-filter: $filter;
+     -moz-filter: $filter;
+       -o-filter: $filter;
+          filter: $filter;
 }
 
 @mixin phone($height, $width, $phone-color, $background-color) {
   .phone {
     height: $height;
     width: $width;
-    margin-left: auto;
-    margin-right: auto;
 
     .outline {
-      width: 100%;
-      height: 100%;
-      margin-left: auto;
-      margin-right: auto;
       background-color: $phone-color;
-      border-radius: 4.0rem/2.5rem;
 
-      .speaker {
-        height: 6%;
-        padding-top: 1.5rem;
-        margin-bottom: 2rem;
-
-        .speaker-outline {
-          width: 20%;
-          height: 100%;
-          margin: auto;
-          border-radius: 2px;
-          background-color: $background-color;
-        }
-      }
-
-      .content {
-        height: 75%;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+      .speaker-outline, .content {
         background-color: $background-color;
-        overflow: hidden;
-
-        @content;
       }
     }
   }
 }
 
+// styles
+.phone {
+  $height: 40rem;
+  $width: 19.75rem;
+  $phone-color: rgba(37, 34, 35, 0.5);
+  $background-color: #fff;
+
+  height: $height;
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+
+  .outline {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $phone-color;
+    border-radius: 4.0rem/2.5rem;
+
+    .speaker {
+      height: 5.5%;
+      padding-top: 1.75rem;
+      margin-bottom: 1.75rem;
+
+      .speaker-outline {
+        width: 20%;
+        height: 100%;
+        margin: auto;
+        border-radius: 2px;
+        background-color: $background-color;
+      }
+    }
+
+    .content {
+      height: 79%;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: $background-color;
+      overflow: hidden;
+    }
+  }
+}
+
+.phone-slider {
+  position: relative;
+  height: initial !important;
+  overflow: auto;
+  cursor: pointer;
+
+  ul {
+    margin-left: 0;
+    margin-bottom: 0;
+
+    li {
+      list-style: none;
+      float: left;
+    }
+  }
+
+  .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin: 0.5rem 0.5rem;
+      text-indent: -999em;
+      border: 0.2rem solid rgba(37, 34, 35, 0.5);
+      border-radius: 0.6rem;
+      cursor: pointer;
+      
+      @include transition(#{background 0.5s, opacity 0.5s});
+    }
+
+    li.active {
+      background: rgba(37, 34, 35, 0.5);
+      border: 0.2rem solid rgba(37, 34, 35, 0);
+    }
+  }
+}
+
+.splash-down {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5rem;
+}
+
+.go-down {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    color: rgba(255, 255, 255, 1.0);
+
+    i {
+      @include transform(translateY(0.5rem));
+    }
+  }
+
+  i {
+    @include transition(0.5s);
+  }
+}
+
+.bullet {
+  color: $bullet-color;
+}
+
 a {
+  color: $link-color;
   @include transition(0.25s);
+
+  &:hover {
+    color: $hover-link-color;
+  }
 }
 
 header {
@@ -118,54 +211,50 @@ header {
   width: 100%;
   height: $header-height;
   line-height: $header-height;
+  background-color: $header-background-color;
+  @include transition(0.5s);
 
   a {
-    color: #ccc;
+    color: $inverted-text-color;
     font-family: $header-font-family;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
 
   a:hover {
-    color: #fff;
+    color: $inverted-header-color;
   }
 
-  .background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.4);
+  .title {
+    float: left;
+    margin-left: 1rem;
   }
 
-  .left {
-    margin-left: 5rem;
-    font-size: $h3-font-size;
-    @include transition(0.5s);
-  }
+  .menu {
+    float: right;
+    margin-right: 1rem;
 
-  .right {
-    margin-right: 5rem;
-  }
-
-  @media #{$small-only} {
-    .left {
-      margin-left: 1rem;
-    }
-
-    .right {
-      margin-right: 1rem;
-      
-      .menu-items {
-        display: none;
-      }
+    .menu-items {
+      display: none;
     }
   }
 
-  @media #{$medium-up} {
-    .right {
+  @media #{$large-up} {
+    .title {
+      margin-left: 5rem;
+      font-size: $h3-font-size;
+      @include transition(0.5s);
+    }
+
+    .menu {
+      margin-right: 5rem;
+
       .menu-button {
         display: none;
+      }
+
+      .menu-items {
+        display: block;
       }
     
       .menu-items a + a {
@@ -173,15 +262,52 @@ header {
       }
     }
   }
+
+  &.menu-open {
+    height: $header-height + $menu-item-height * 6;
+
+    .menu {
+      height: 100%;
+      width: 100%;
+      float: none;
+
+      .menu-button {
+        text-align: right;
+        margin-right: 1rem;
+      }
+
+      .menu-items {
+        height: 100%;
+        width: 100%;
+        display: block;
+
+        a {
+          width: 100%;
+          height: $menu-item-height;
+          line-height: $menu-item-height;
+          text-align: center;
+          display: block;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
-section.splash {
+#splash {
   display: table;
   width: 100%;
   height: 100%;
   position: relative;
-  color: #fff;
   text-align: center;
+
+  div {
+      display: table-cell;
+      vertical-align: middle;
+      margin-top: 0;
+      margin-bottom: 0;
+      float: none;
+  }
 
   .background-img {
     position: absolute;
@@ -194,15 +320,7 @@ section.splash {
     @include background-size(cover);
   }
 
-  > div {
-      display: table-cell;
-      vertical-align: middle;
-      margin-top: 0;
-      margin-bottom: 0;
-      float: none;
-  }
-
-  > div.row {
+  .row {
     position: relative;
     z-index: 2;
 
@@ -210,47 +328,123 @@ section.splash {
       @include transition(0.5s);
     }
 
-    > h1 {
-      color: #fff;
+    h1 {
+      color: $inverted-header-color;
       letter-spacing: 6px;
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
 
-    > h5 {
-      color: #ccc;
+    h5 {
+      color: $inverted-text-color;
       letter-spacing: 2px;
     }
   }
+}
 
-  > a.go-down {
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-bottom: 3rem;
-    color: #fff;
-    opacity: 0.8;
+.showcase {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
 
-    > i {
-      @include transition(0.5s);
+  .details {
+    @extend .small-12;
+    @extend .medium-6;
+    @extend .large-6;
+    @extend .columns;
+    
+    text-align: left;
+
+    @media #{$small-only} {
+      margin-bottom: 4rem;
+    }
+
+    @media #{$medium-up} {
+      padding-top: 3.5rem;
+      text-align: right;
     }
   }
 
-  > a.go-down:hover {
-    opacity: 1.0;
-  }
-
-  > a.go-down:hover i {
-    @include transform(translateY(0.5rem));
+  .work {
+    @extend .small-12;
+    @extend .medium-6;
+    @extend .large-5;
+    @extend .large-offset-1;
+    @extend .columns;
   }
 }
 
-.dhi {
-  $background-color: #2b3a42;
-  $content-color: #bdd4de;
+#dhi {
+  $background-color: $dark-teal-blue;
+  $content-color: $inverted-text-color;
 
+  background-color: $background-color;
+
+  padding-top: 7rem;
+
+  .work-title {
+    margin-bottom: 2rem;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  hr {
+    border-color: $content-color;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #fff;
+  }
+
+  p {
+    color: $content-color;
+  }
+
+  a {
+    color: $inverted-link-color;
+
+    &:hover {
+     color: $inverted-hover-link-color;
+    }
+  }
+
+  @include phone(40rem, 19.75rem, rgba(37, 34, 35, 0.5), $background-color);
+}
+
+#fowinks {
+  $background-color: $sky-blue;
+  $content-color: $text-color;
+  
+  background-color: $background-color;
+
+  hr {
+    border-color: #999;
+  }
+
+  p {
+    color: $content-color;
+  }
+
+  a {
+    color: $link-color;
+
+    &:hover {
+      color: $hover-link-color;
+    }
+  }
+
+  .bullet {
+    color: rgba(37, 32, 33, 0.5);
+  }
+
+  @include phone(40rem, 19.75rem, rgba(37, 34, 35, 0.5), $background-color);
+}
+
+#google-code-in {
+  $background-color: $ocean-blue;
+  $content-color: #dde4ee;
+  
   background-color: $background-color;
 
   hr {
@@ -266,67 +460,99 @@ section.splash {
   }
 
   a {
-    color: #00bcef;
+    color: $inverted-link-color;
 
     &:hover {
-     color: #008cba;
+      color: $inverted-hover-link-color;
     }
   }
 
-  @include phone(40rem, 20rem, rgba(37, 34, 35, 0.5), $background-color);
+  .dots {
+    li {
+      border: 0.2rem solid rgba(220, 210, 215, 0.7);
+    }
+
+    li.active {
+      background: rgba(220, 210, 215, 0.7);
+      border: 0.2rem solid rgba(220, 210, 215, 0);
+    }
+  }
+
+  @include phone(39.75rem, 19.75rem, rgba(37, 34, 35, 0.5), $background-color);
 }
 
-.fowinks {
-  $background-color: #bdd4de;
-  
-  background-color: #bdd4de;
+#about {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
 
-  hr {
-    border-color: #999;
+  background-color: $almost-white;
+
+  p {
+    color: $text-color;
+  }
+
+  .title {
+    @extend .small-12;
+    @extend .columns;
+
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  .pic-col {
+    @extend .small-12;
+    @extend .large-4;
+    @extend .columns;
+
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @media #{$large-up} {
+      margin-bottom: 0;
+    }
+  }
+
+  .desc-col {
+    @extend .small-12;
+    @extend .large-8;
+    @extend .columns;
+  }
+}
+
+#contact {
+  background-color: $dark-gray;
+
+  padding-top: 4rem;
+
+  h5 {
+    color: $inverted-header-color;
+  }
+
+  p {
+    color: $inverted-text-color;
   }
 
   a {
-    color: #005cda;
+   color: $inverted-link-color;
 
-    &:hover {
-      color: #009efe;
-    }
+   &:hover {
+     color: $inverted-hover-link-color;
+   }
   }
 
-  @include phone(35rem, 20rem, rgba(37, 34, 35, 0.5), $background-color);
-}
-
-.showcase {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-
-  .details {
+  .col {
     @extend .small-12;
-    @extend .medium-6;
-    @extend .large-6;
-    @extend .columns;
-    
-    text-align: left;
-
-    @media #{$small-only} {
-      margin-bottom: 4rem;
-    }
-
-    @media #{$medium-up} {
-      text-align: right;
-    }
-  }
-
-  .work {
-    @extend .small-12;
-    @extend .medium-6;
-    @extend .large-5;
-    @extend .large-offset-1;
+    @extend .medium-4;
     @extend .columns;
   }
-}
 
-.bullet {
-  color: #6e686a;
+  .copyright {
+    padding-left: 1rem;
+
+    p {
+      color: $gray;
+      text-align: center;
+    }
+  }
 }
 
