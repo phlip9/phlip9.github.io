@@ -138,7 +138,8 @@ module.exports = function(grunt) {
           'jquery-placeholder',
           'jquery.cookie',
           'foundation',
-          'unslider'
+          'unslider',
+          'smooth-scroll.js'
         ]
       }
     },
