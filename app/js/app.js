@@ -1,5 +1,6 @@
+'use strict';
+
 var app = (function(document, $) {
-  'use strict';
   var docElem = document.documentElement,
 
   _userAgentInit = function() {
@@ -16,7 +17,6 @@ var app = (function(document, $) {
 }(document, jQuery));
 
 (function($, smoothScroll) {
-  'use strict';
   app.init();
 
   smoothScroll.init();
