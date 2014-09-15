@@ -378,21 +378,21 @@ header {
   }
 }
 
-#dhi {
+.work-title {
+  margin-bottom: 2rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+#junyo {
   $background-color: $dark-teal-blue;
   $content-color: $inverted-text-color;
 
   background-color: $background-color;
 
   padding-top: 7rem;
-
-  .work-title {
-    margin-bottom: 2rem;
-
-    h1 {
-      text-align: center;
-    }
-  }
 
   hr {
     border-color: $content-color;
@@ -415,6 +415,46 @@ header {
   }
 
   @include phone(40rem, 19.75rem, rgba(37, 34, 35, 0.5), $background-color);
+}
+
+#dhi {
+  $background-color: $ocean-blue;
+  $content-color: #dde4ee;
+  
+  background-color: $background-color;
+
+  hr {
+    border-color: $content-color;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #fff;
+  }
+
+  p {
+    color: $content-color;
+  }
+
+  a {
+    color: $inverted-link-color;
+
+    &:hover {
+      color: $inverted-hover-link-color;
+    }
+  }
+
+  .dots {
+    li {
+      border: 0.2rem solid rgba(220, 210, 215, 0.7);
+    }
+
+    li.active {
+      background: rgba(220, 210, 215, 0.7);
+      border: 0.2rem solid rgba(220, 210, 215, 0);
+    }
+  }
+
+  @include phone(39.75rem, 19.75rem, rgba(37, 34, 35, 0.5), $background-color);
 }
 
 #fowinks {
