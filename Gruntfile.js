@@ -169,14 +169,14 @@ module.exports = function(grunt) {
     },
     
     imagemin: {
+      options: {
+        optimizationLevel: 7
+      },
       dist: {
-        options: {
-          pngquant: true
-        },
         files: [{
           expand: true,
           cwd: '<%= app %>/images/',
-          src: ['**/*/.{png,jpg,jpeg,gif}'],
+          src: ['**/*.{png,jpg,jpeg,gif}'],
           dest: '<%= dist %>/images/'
         }]
       }
