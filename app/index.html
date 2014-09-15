@@ -36,7 +36,7 @@
       </div>
       <div class="menu-items">
         <a data-scroll href="#splash">Home</a>
-        <a data-scroll href="#dhi">Work</a>
+        <a data-scroll href="#junyo">Work</a>
         <a data-scroll href="#about">About</a>
         <a data-scroll href="#contact">Contact</a>
         <a href="http://github.com/phlip9" target="_blank">Github</a>
@@ -59,18 +59,64 @@
       </h5>
     </div>
     <div class="splash-down">
-      <a data-scroll href="#dhi" class="go-down">
+      <a data-scroll href="#junyo" class="go-down">
         <i class="fa fa-chevron-down fa-2x"></i> 
       </a>
     </div>
   </section>
 
-  <section id="dhi" class="showcase">
+  <section id="junyo" class="showcase">
     <div class="row work-title">
       <h1>
         Work
       </h1>
     </div>
+    <div class="row">
+      <div class="details">
+        <h3>Realtime Teacher Dashboard</h3>
+        <hr>
+        <h5>Worked for</h5>
+        <p><a href="http://junyo.com" target="_blank">Junyo</a>
+          <span class="bullet">•</span> Menlo Park,
+          California <span class="bullet">•</span> June 2014 - August 2014
+        </p>
+        <h5>The product</h5>
+        <p>
+          The realtime teacher dashboard is part of the Junyo Streams product.
+          The dashboard provides teachers with a realtime view into what
+          students are doing in their class. Teachers are notified when a
+          student is behind or having trouble, and they can see the overall
+          progress of all their classes down to individual students.
+        </p>
+        <h5>What I worked on</h5>
+        <p>
+          I worked on a team with 2 other developers to build the dashboard
+          and accompanying backend components. We built an event store and
+          data processing backend in <a href="http://python.org/" target="_blank">Python</a>
+          using <a href="http://hbase.apache.org/" target="_blank">HBase</a> for the fast layer and
+          <a href="http://postgresql.org/" target="_blank">PostgreSQL</a> for
+          the data processing layer. The secure PII (Personally
+          Identifiable Information) server was writting in Python using the
+          <a href="http://djangoproject.com/" target="_blank">Django framework</a>.
+          The dashboard itself (which is what I primarily
+          worked on) was written in Javascript using <a href="http://facebook.github.io/react" target="_blank">React</a>
+          for the dynamic UI and the <a href="http://facebook.github.io/flux/" target="_blank">FLUX</a>
+          architecture for simplified data flow, modular code, and
+          ease of testing.
+        </p>
+        <h5>Other technologies used</h5>
+        <p>
+          <a href="http://facebook.github.io/jest/" target="_blank">Jest</a> <span class="bullet">•</span> unit testing</br>
+          <a href="http://lesscss.org/" target="_blank">Less</a> <span class="bullet">•</span> css styles</br>
+          <a href="http://gulpjs.com/" target="_blank">Gulp</a> <span class="bullet">•</span> automation, asset revving, code minification, preprocessing, and style sheet compilation</br>
+          <a href="http://browserify.org/" target="_blank">Browserify</a> <span class="bullet">•</span> modularize Javascript code</br>
+          <a href="http://git-scm.com/" target="_blank">Git</a> + <a href="http://github.com/" target="_blank">Github</a> <span class="bullet">•</span> version control and collaboration
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dhi" class="showcase">
     <div class="row">
       <div class="details">
         <h3>Chemical Safety App</h3>
