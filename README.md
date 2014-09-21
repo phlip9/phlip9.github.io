@@ -25,3 +25,20 @@ Run grunt to get the debug build up and runnning
 
     $ grunt
 
+
+### Deploying ###
+
+Make sure .ftppass is present in the root project directory and is of the form
+
+    {
+      "phlip9.com": {
+        "username": "username1",
+        "password": "password1"
+      }
+    }
+
+Build the files and deploy
+
+    $ grunt publish
+    $ grunt deploy
+
