@@ -386,6 +386,16 @@ header {
   }
 }
 
+@media #{$medium-up} {
+  .img-showcase:first-child {
+    margin-top: 7rem;
+  }
+}
+
+.img-showcase + .img-showcase {
+  padding-top: 1rem;
+}
+
 #junyo {
   $background-color: $dark-teal-blue;
   $content-color: $inverted-text-color;
