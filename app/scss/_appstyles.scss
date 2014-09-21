@@ -387,12 +387,12 @@ header {
 }
 
 @media #{$medium-up} {
-  .img-showcase:first-child {
+  .img-showcase--first {
     margin-top: 7rem;
   }
 }
 
-.img-showcase + .img-showcase {
+.img-showcase {
   padding-top: 1rem;
 }
 
