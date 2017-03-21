@@ -219,7 +219,7 @@ module.exports = function(grunt) {
   grunt.registerTask('server-dist', ['connect:dist']);
   grunt.registerTask('publish', [
     'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist',
-    'imagemin:dist', 'concat', 'cssmin', 'uglify', 'usemin', 'uncss:dist'
+    'imagemin:dist', 'concat', 'cssmin', /*'uglify',*/ 'usemin', 'uncss:dist'
   ]);
   grunt.registerTask('deploy', ['ftp-deploy']);
 

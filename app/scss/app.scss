@@ -1,14 +1,14 @@
 @import "normalize";
-@import "settings";
+//@import "settings";
 
 @charset "UTF-8";
 
 // Behold, here are all the Foundation components.
-@import
-  "foundation/components/grid",
+//@import
+  //"foundation/components/grid",
   /*"foundation/components/accordion",*/
   /*"foundation/components/alert-boxes",*/
-  "foundation/components/block-grid",
+  //"foundation/components/block-grid",
   /*"foundation/components/breadcrumbs",*/
   /*"foundation/components/button-groups",*/
   /*"foundation/components/buttons",*/
@@ -38,11 +38,11 @@
   /*"foundation/components/thumbs",*/
   /*"foundation/components/tooltips",*/
   /*"foundation/components/top-bar",*/
-  "foundation/components/type"
+  //"foundation/components/type"
   /*"foundation/components/offcanvas",*/
   /*"foundation/components/visibility"*/
-  ;
+  //;
 
-  @import "font-awesome";
+//@import "font-awesome";
 
-  @import "appstyles";
+@import "appstyles";

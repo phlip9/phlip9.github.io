@@ -9,393 +9,73 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat' rel='stylesheet' type='text/css'>
   <!-- build:css css/app.min.css -->
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/app_override.css">
+  <!--<link rel="stylesheet" href="css/app_override.css">-->
   <!-- endbuild -->
-  <!-- build:js js/vendor/modernizr.min.js -->
-  <script src="bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-49737857-1', 'phlip9.com');
-    ga('require', 'displayfeatures', 'linkid', 'linkid.js');
-    ga('send', 'pageview');
-  </script>
 </head>
 <body>
-  <header>
-    <div class="title">
-      <a data-scroll href="#splash">Philip Hayes</a>
-    </div>
-    <div class="menu">
-      <div class="menu-button">
-        <a><i class="fa fa-bars"></i> Menu</a>
-      </div>
-      <div class="menu-items">
-        <a data-scroll href="#junyo">Work</a>
-        <a data-scroll href="#contact">Contact</a>
-        <a href="https://drive.google.com/open?id=1B6Wqj_F7HAg5NjCXA30oOFr6G8kbAaDFU9zh-VHd1Zo" target="_blank">Résumé</a>
-        <a href="http://github.com/phlip9" target="_blank">Github</a>
-        <a href="http://www.linkedin.com/pub/philip-hayes/54/8a4/264/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </header>
-
-  <section id="splash">
-    <div class="background-img"></div>
-    <div class="row">
-      <h5>Hi, my name's</h5>
-      <h1>Philip Hayes</h1>
-      <h5>
-        Programmer 
-        <span class="bullet">•</span>
-         Web Developer 
-        <span class="bullet">•</span>
-         Software Engineer
-      </h5>
-    </div>
-    <div class="splash-down">
-      <a data-scroll href="#junyo" class="go-down">
-        <i class="fa fa-chevron-down fa-2x"></i> 
-      </a>
-    </div>
-  </section>
-
-  <section id="junyo" class="showcase">
-    <div class="row work-title">
-      <h1>
-        Work
-      </h1>
-    </div>
-    <div class="row">
-      <div class="details">
-        <h3>Realtime Teacher Dashboard</h3>
-        <hr>
-        <h5>Worked for</h5>
-        <p><a href="http://junyo.com" target="_blank">Junyo</a>
-          <span class="bullet">•</span> Menlo Park,
-          California <span class="bullet">•</span> June 2014 - August 2014
-        </p>
-        <h5>The product</h5>
-        <p>
-          The realtime teacher dashboard is part of the Junyo Streams product.
-          The dashboard provides teachers with a realtime view into what
-          students are doing in their class. Teachers are notified when a
-          student is behind or having trouble, and they can see the overall
-          progress of all their classes down to individual students.
-        </p>
-        <h5>What I worked on</h5>
-        <p>
-          I worked on a team with 2 other developers to build the dashboard
-          and accompanying backend components. We built an event store and
-          data processing backend in <a href="http://python.org/" target="_blank">Python</a>
-          using <a href="http://hbase.apache.org/" target="_blank">HBase</a> for the fast layer and
-          <a href="http://postgresql.org/" target="_blank">PostgreSQL</a> for
-          the data processing layer. The secure PII (Personally
-          Identifiable Information) server was writting in Python using the
-          <a href="http://djangoproject.com/" target="_blank">Django framework</a>.
-          The dashboard itself (which is what I primarily
-          worked on) was written in Javascript using <a href="http://facebook.github.io/react" target="_blank">React</a>
-          for the dynamic UI and the <a href="http://facebook.github.io/flux/" target="_blank">FLUX</a>
-          architecture for simplified data flow, modular code, and
-          ease of testing.
-        </p>
-        <h5>Other technologies used</h5>
-        <p>
-          <a href="http://facebook.github.io/jest/" target="_blank">Jest</a> <span class="bullet">•</span> unit testing</br>
-          <a href="http://lesscss.org/" target="_blank">Less</a> <span class="bullet">•</span> css styles</br>
-          <a href="http://gulpjs.com/" target="_blank">Gulp</a> <span class="bullet">•</span> automation, asset revving, code minification, preprocessing, and style sheet compilation</br>
-          <a href="http://browserify.org/" target="_blank">Browserify</a> <span class="bullet">•</span> modularize Javascript code</br>
-          <a href="http://git-scm.com/" target="_blank">Git</a> + <a href="http://github.com/" target="_blank">Github</a> <span class="bullet">•</span> version control and collaboration
-        </p>
-      </div>
-      <div class="work">
-        <a href="images/junyo_0.png"><img class="img-showcase--first" src="images/junyo_0.png"></a>
-        <a href="images/junyo_1.png"><img class="img-showcase" src="images/junyo_1.png"></a>
-        <a href="images/junyo_2.png"><img class="img-showcase" src="images/junyo_2.png"></a>
-      </div>
-    </div>
-  </section>
-
-  <section id="dhi" class="showcase">
-    <div class="row">
-      <div class="details">
-        <h3>Chemical Safety App</h3>
-        <hr>
-        <h5>Interned for</h5>
-        <p><a href="http://dhigroup.com" target="_blank">DHI</a> 
-          <span class="bullet">•</span> Hørsholm, Denmark 
-          <span class="bullet">•</span> June 2013 - July 2013</p>
-        <h5>The problem</h5>
-        <p>
-          DHI's chemical engineers found it cumbersome to carry around hefty,
-          oversized Material Safety Data Sheets (MSDS) and wanted to be able to
-          browse through the company's collection of chemical safety sheets 
-          quickly and easily on their smart phones.
-        </p>
-        <h5>The solution</h5>
-        <p>
-          I wrote a mobile app prototype in JavaScript using the 
-          <a href="http://www.appcelerator.com/titanium/" target="_blank">
-            Appcelerator Titanium SDK
-          </a> and 
-          <a href="http://www.appcelerator.com/platform/alloy/" target="_blank">
-            Alloy MVC framework
-          </a>. This combination of frameworks allowed me to get up
-          and running quickly on Android, iOS, and Windows Phone with a single
-          code base. I also wrote a 
-          <a href="https://www.djangoproject.com/" target="_blank">django</a> + 
-          <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a>
-          database backend to store, access, and modify the data sheets through
-          a REST API and user-friendly admin interface.
-        </p>
-      </div>
-      <div class="work">
-        <div class="phone">
-          <div class="outline">
-            <div class="speaker">
-              <div class="speaker-outline"></div>
-            </div>
-            <div class="content">
-              <div class="phone-slider">
-                <ul>
-                  <li>
-                    <img src="images/apb_1.png" />
-                  </li>
-                  <li>
-                    <img src="images/apb_2.png" />
-                  </li>
-                  <li>
-                    <img src="images/apb_3.png" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="fowinks" class="showcase">
-    <div class="row">
-      <div class="details">
-        <h3>Sleep Survey Web App</h3>
-        <hr>
-        <h5>Interned for</h5>
-        <p><a href="http://41winks.org" target="_blank">41Winks</a>
-          <span class="bullet">•</span> Menlo Park,
-          California <span class="bullet">•</span> July 2013 - August 2013
-        </p>
-        <h5>The problem</h5>
-        <p>
-          Nearly 70 million Americans suffer from chronic sleep disorders like
-          sleep apnea, insomnia, restless leg syndrome, and narcolepsy.
-          <sup><a href="http://www.cdc.gov/sleep/about_us.htm" target="_blank">[1]</a></sup>
-        </p>
-        <h5>The solution</h5>
-        <p>
-          I wrote a survey web app for patients and doctors to diagnose potential
-          sleep disorders. A number of Stanford researchers use the app to gather
-          data for further study. The frontent was developed in HTML/CSS/JS with
-          <a href="http://angularjs.org/" target="_blank">AngularJS</a> as the MV* framework
-          and <a href="http://topcoat.io/" target="_blank">Topcoat</a> for basic mobile styles.
-          The backend was developed in Python using the
-          <a href="http://flask.pocoo.org/" target="_blank">Flask</a> web framework.
-        </p>
-      </div>
-      <div class="work">
-        <div class="phone">
-          <div class="outline">
-            <div class="speaker">
-              <div class="speaker-outline"></div>
-            </div>
-            <div class="content">
-              <div class="phone-slider">
-                <ul>
-                  <li>
-                    <img src="images/41winks_1.png" />
-                  </li>
-                  <li>
-                    <img src="images/41winks_2.png" />
-                  </li>
-                  <li>
-                    <img src="images/41winks_3.png" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="google-code-in" class="showcase">
-    <div class="row">
-      <div class="details">
-        <h3>Google Code-In</h3>
-        <hr>
-        <h5>OI File Manager</h5>
-        <p>
-          <a href="http://openintents.org" target="_blank">OpenIntents Organization</a>
-          <span class="bullet">•</span> Winter 2011 - Spring 2012
-        </p>
-        <p>
-          I volunteered for the open source organization OpenIntents where I
-          worked on their Android app, OI File Manager. The goal was to write
-          unit tests, fix bugs, and implement features during the Google Code-In
-          competition to gain points.
-        </p>
-        <p>
-          Languages & Frameworks: Java, C, Android
-        </p>
-        <h5>NetBSD</h5>
-        <p>
-          <a href="http://netbsd.org" target="_blank">NetBSD Organization</a>
-          <span class="bullet">•</span> Winter 2012 - Spring 2013
-        </p>
-        <p>
-          During the 2012-2013 Google Code-In competition, I worked for NetBSD,
-          a Unix-like, open source operating system. I wrote ATF (automatic
-          test framework) tests for libc and the NetBSD kernel, fixed bugs,
-          maintained pkgsrc packages, and lurked on IRC.
-        </p>
-        <p>
-          Languages & Frameworks: C
-        </p>
-      </div>
-      <div class="work">
-        <div class="phone">
-          <div class="outline">
-            <div class="speaker">
-              <div class="speaker-outline"></div>
-            </div>
-            <div class="content">
-              <div class="phone-slider">
-                <ul>
-                  <li>
-                    <img src="images/oi-file-manager_2_1.png" />
-                  </li>
-                  <li>
-                    <img src="images/oi-file-manager_2_2.png" />
-                  </li>
-                  <li>
-                    <img src="images/oi-file-manager_2_3.png" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="row">
-      <div class="title">
-        <h1>About me</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="pic-col">
-        <img src="images/profile.png" />
-      </div>
-      <div class="desc-col">
-        <p>
-          Hi, my name's Philip, a 19 year old guy living in Berkeley, CA.
-          I currently attend Cal (UC Berkeley) as a freshman EECS (Computer
-          Science) major. I love pushing code, designing beautiful websites,
-          and solving tough problems in unique, elegant, and efficient ways.
-        </p>
-        <p>
-          When I'm not staring at the computer, you'll find me cycling with
-          the Cal Cycling team, flying drones, competing in hackathons
-          (CalHacks, LA Hacks, Silicon Beach Fest, the Biannual 5C Hackathon,
-          and CalTech's Startup Weekend to name a few), solving Project Euler
-          problems, messing with my 3D printer, and watching anime.
-        </p>
-        <p>
-          On the computer, however, I enjoy reading about the latest startup
-          hype, perfecting my dotfiles, and learning anything from Typography
-          and Graphic Design to Compilers and Algorithms to Hacking and Reverse
-          Engineering. I also contribute to the greater programming community
-          by writing tests, fixing bugs, and implementing features for my
-          favorite open source projects (neovim, ioredis, NetBSD).
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer id="contact">
-    <div class="row">
-      <div class="col">
-        <h5>Email</h5>
-        <hr>
-        <p>
-          Questions? Comments?
-          <br>
-          <a href="mailto:philip@phlip9.com">philip@phlip9.com</a>
-        </p>
-      </div>
-      <div class="col">
-        <h5>Phone</h5>
-        <hr>
-        <p>
-          Send me a text or something!
-          <br>
-          <a href="tel:8182766040">(818) 276-6040</a>
-        </p>
-      </div>
-      <div class="col">
-        <h5>Social</h5>
-        <hr>
-        <p>
-          <a href="http://github.com/phlip9" target="_blank">Code with me on github.</a>
-          <br>
-          <a href="http://www.linkedin.com/pub/philip-hayes/54/8a4/264/" target="_blank">Check out my LinkedIn.</a>
-        </p>
-      </div>
-    </div>
-    <div class="row copyright">
+  <div class="container">
+    <section class="header">
+      <img src="/images/profile.png" />
+      <h1>philip hayes</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">about</a></li>
+          <li><a href="#interests">interests</a></li>
+          <li><a href="https://drive.google.com/open?id=0B8lgcDXI8hEfUWRqZ3BaZy05S2c">résumé (ml)</a></li>
+          <li><a href="https://drive.google.com/open?id=0B8lgcDXI8hEfR01IOGpXWVVkUW8">résumé (crypto)</a></li>
+          <li><a href="https://github.com/phlip9">github</a></li>
+          <li><a href="https://linkedin.com/in/philiphayes9">linkedin</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section id="about">
+      <h2>about</h2>
       <p>
-        <a href="https://github.com/phlip9/phlip9.com" target="_blank">Hand coded with love. See the site's source on github!</a>
-        <br>
-        © 2015 Philip Hayes
+        Hi, my name is Philip. I'm a <span id="age"></span> year old, full-time student majoring in EECS
+        (Electrical Engineering and Computer Science) at the University of California,
+        Berkeley.
       </p>
-    </div>
-  </footer>
-
-  <!-- build:js js/vendor/libraries.min.js -->
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/fastclick/lib/fastclick.js"></script>
-  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-  <script src="bower_components/unslider/src/unslider.js"></script>
-  <script src="bower_components/smooth-scroll.js/dist/js/smooth-scroll.js"></script>
-  <!--<script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>-->
-  <!--<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>-->
-  <!-- endbuild -->
-  <!-- build:js js/app.min.js -->
-  <script src="js/app.js"></script>
-  <!-- endbuild -->
+      <p>
+        I work as an undergraduate researcher under prof. John Canny
+        <a href="https://eecs.berkeley.edu/~jfc/">[1]</a>
+        on the BIDMat/BIDMach project. <a href="http://bid2.berkeley.edu/bid-data-project/">[2]</a>
+      </p>
+      <p>
+        This spring semester, I will also be teaching a course on cryptocurrencies for the second time to a class of over Berkeley 130 students.
+        <a href="https://blockchain.berkeley.edu/decal">[3]</a>
+      </p>
+      <p>
+        If you want to get in contact with me, send an email to <a href="mailto:philip@phlip9.com">philip@phlip9.com</a>.
+      </p>
+    </section>
+    <section id="interests">
+      <h2>interests</h2>
+      <p>
+        I am academically interested in Cryptography, Distributed Consensus, and Machine Learning.
+      </p>
+    </section>
+    <section id="lectures">
+      <h2>selected lectures</h2>
+      <p>
+        <h3> Scaling Bitcoin: Cryptocurrencies for the Masses </h3>
+        <iframe width="650" height="400" src="https://www.youtube.com/embed/yN1h1k3GWm8" frameborder="0" allowfullscreen></iframe>
+      </p>
+      <p>
+        <h3> Ethereum & Smart Contracts: Enabling a Decentralized Future </h3>
+        <iframe width="650" height="400" src="https://www.youtube.com/embed/K3gG8MRYhyk" frameborder="0" allowfullscreen></iframe>
+      </p>
+      <p>
+        <h3> The Fight for Privacy: Anonymization Techniques, Protocols, and Altcoins </h3>
+        <iframe width="650" height="400" src="https://www.youtube.com/embed/64FDZy42DnM" frameborder="0" allowfullscreen></iframe>
+      </p>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+  <script>
+    (function() {
+      var age_elem = document.getElementById("age");
+      age_elem.innerHTML = moment().diff(moment("1996-05-22"), "years");
+    })();
+  </script>
 </body>
 </html>
