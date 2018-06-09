@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/philiphayes
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://phlip9.com
+  * I am philiphayes (https://keybase.io/philiphayes) on keybase.
+  * I have a public key with fingerprint 0008 035E 498D 5589 8A11  3B82 FB8B D6AD C546 4595
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203cb0c5793862cebc11ac3580a6ad141ccb7781ffdf9fb4e4cb3a0b8e5178fa750a",
+      "fingerprint": "0008035e498d55898a113b82fb8bd6adc5464595",
+      "host": "keybase.io",
+      "key_id": "fb8bd6adc5464595",
+      "kid": "01017eb7f16c7d7fc560b9fc64b4c448f2d7a681c6ada7383ca55530b0b8fa71868e0a",
+      "uid": "213a090c97f4b24a8c8270abf84a5219",
+      "username": "philiphayes"
+    },
+    "service": {
+      "hostname": "phlip9.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1528501580,
+  "expire_in": 157680000,
+  "prev": "50748c4e11be533a266527caa607dd62c39ce659588f8ab2d61e38e12ba6d24d",
+  "seqno": 23,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMN0AnicbVJtUFRVGF4ETGFMSGBnkJq4EKGQ3u97dvOjEUFiwbGy+Mz1nnPPhTvA
+7rK7fCzLh6ZZQwrTqMVEizAxGtYaIMuIMcI6UiOkEaNIo432A4RMJkVpkiG6y2S/
++nXmvOd5nvO8z/teWuWvCfKb/2jMPZiSfNxv2NtYqsldG57uJKBZchB6J1GIlw5c
+JGGb3VioSISeICmaZBAkESfoGMDTCENEUSJiOECKvChRLIUQFARAybIk62TIYhZB
+RiQhwBwlAFkUOFIkEglZMeVjq8WqmOw+WZIEJMNhVgckjgM6IFIUAwEtQwAlVRZx
+LM9yOk4lFphtPoZqDoo2vEExqzX1Ylyy9z/4p75JSsBQkCkeCZIgI44noU5GPAtZ
+xLJApiVB5AGFVLIoMIBBIsdxDAlV46pnCvAAL/kuXZKjKbUlHYl0gsxCmhUBArRA
+ilAGrMjRlM4HtGGrSSzGKtpSoBQplgLRgW1EdSKhPpQpCPuy9TXzH0jF6DYgc7FK
+tljNdjMyF6n1ArvdovfR7A6LD1eOofFfBSNUTJKao0oow1abYjYRekpFIrvik6Q4
+GnAkpU4mkcAVFsWKjYoPwQk8UAMnfd/gMlWSIwUWIBZTFMQcw4g0z3O0gESRJwVJ
+UofM6BDm1TgBkIEIaYmnMAMwRUORl2hWInw9lZjMhJ5mVJ9ivqppU/JNor3Uionq
+i968AI1fkGZ54DLfgmmCVoY8XTvw4eqFNTVJDyNjPg3/uXbSYIpvfMQ/t8Nw+438
+krn5m5aRY/tmzn2yjrp+yLTxY1dslzfoRkj+b93a5bXjWekPY5v6Pc/Wn6gMvzdb
+GQYqi6pGtu7uDR1884yxO/f1Y43Tp9JyNy47f5TO6r+TcubFUWJ/xlk+4GzLzJ77
+tdoto4Wh708lfMsONM89uPu7xdkV2ZeqPSWXG0/eSykOfOCJubCw0Jt8PLqozplV
+d7h6d82Rr7zlRMVgCNiWYYiA9Q1rNfm7pBWOhvHO3KrN0TezD7nSXk04MelJaE87
+fcUFoiYcrYfHWmYGymK981/GTzqGum+d29bxdj3QOhdSb//UZLj1rrY525XpDAib
+cuc5+8PkIO/wGjCWaGsKmboaEZUClccNX2yujppxTXR+53a+YmjdwW2a1bcNeUbf
+u5o+sCtu8shg0mLF+j7t8x1p0VXtP7TFKRF13wdmSpcPfh3/47r987M747Z49rrn
+lZXdTxZTaq6tb25rHeu4ULKi82DaYu/9nKMNrovjwR9MlJ8stQc/1uy5Ejb3zTvJ
+Br+/haGX3KnBn7sycp7Z5wwPnR55FGkM7Dl9Y/ot/+phvP3AZP2vfcOr/hA/O3+9
+L8ne8gK25mQ/8Tqi6rZz9Gtsz97Il3OnyMA7fwX0ZFljVmd2ueKqvO1uz6W7zb/Y
+drYG5201+4/2bTqQXvXn5Wv/AFETwUw=
+=GDoy
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/philiphayes
+
+==================================================================

@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd:'<%= app %>/',
-          src: ['fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
+          src: ['fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**', 'keybase.txt'],
           dest: '<%= dist %>/'
         } , {
           expand: true,
@@ -180,19 +180,6 @@ module.exports = function(grunt) {
           dest: '<%= dist %>/images/'
         }]
       }
-    },
-
-    'ftp-deploy': {
-      build: {
-        auth: {
-          host: 'ftp.tolucamedia.com',
-          port: 21,
-          authKey: 'phlip9.com'
-        },
-        src: '<%= dist %>/',
-        dest: '/',
-        exclusions: ['.*']
-      }
     }
 
   });
@@ -210,7 +197,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower-install');
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-ftp-deploy');
 
   grunt.registerTask('compile-sass', ['sass']);
   grunt.registerTask('bower-install', ['bowerInstall']);
@@ -221,7 +207,6 @@ module.exports = function(grunt) {
     'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist',
     'imagemin:dist', 'concat', 'cssmin', /*'uglify',*/ 'usemin', 'uncss:dist'
   ]);
-  grunt.registerTask('deploy', ['ftp-deploy']);
 
 };
 
