@@ -5,17 +5,13 @@ My personal portfolio website.
 
 ### Setup ###
 
-Install [nodejs](http://nodejs.org/) (Ubuntu)
-https://github.com/joyent/node/wiki/installing-node.js-via-package-manager
-
-    $ curl -sL https://deb.nodesource.com/setup | sudo bash -
-    $ sudo apt-get install nodejs
+Install [nodejs](http://nodejs.org/)
 
 Install the dependencies
 
     $ cd phlip9.com
     $ npm install
-    $ sudo npm install -g bower grunt-cli
+    $ npm install -g bower grunt-cli
 
 Install the bower dependencies
 
@@ -28,7 +24,7 @@ Run grunt to get the debug build up and runnning
 
 ### Deploying ###
 
-Make sure .ftppass is present in the root project directory and is of the form
+Make sure `.ftppass` is present in the root project directory and is of the form
 
     {
       "phlip9.com": {
@@ -40,5 +36,5 @@ Make sure .ftppass is present in the root project directory and is of the form
 Build the files and deploy
 
     $ grunt publish
-    $ grunt deploy
+    $ ./deploy.sh
 
