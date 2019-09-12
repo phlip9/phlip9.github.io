@@ -1,9 +1,0 @@
-{
-  "name": "zf5_project",
-  "dependencies": {
-    "font-awesome": "~4.4.0",
-    "foundation": "~5.5.2",
-    "smooth-scroll.js": "~7.1.1",
-    "unslider": "~1.0.0"
-  }
-}

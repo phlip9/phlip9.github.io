@@ -1,40 +1,11 @@
-phlip9.com
-==========
+![Philip Hayes Profile Picture](img/profile.png)
 
-My personal portfolio website.
+philip hayes
+============
 
-### Setup ###
+[résumé](https://drive.google.com/file/d/1HeLUXGJNcmpdo_4kVam4KePGxcvN4oX9/view?usp=sharing) -
+[github](https://github.com/phlip9) -
+[twitter](https://twitter.com/phlip9) -
+[linkedin](https://linkedin.com/in/philiphayes9)
 
-Install [nodejs](http://nodejs.org/)
-
-Install the dependencies
-
-    $ cd phlip9.com
-    $ npm install
-    $ npm install -g bower grunt-cli
-
-Install the bower dependencies
-
-    $ bower install
-
-Run grunt to get the debug build up and runnning
-
-    $ grunt
-
-
-### Deploying ###
-
-Make sure `.ftppass` is present in the root project directory and is of the form
-
-    {
-      "phlip9.com": {
-        "username": "username1",
-        "password": "password1"
-      }
-    }
-
-Build the files and deploy
-
-    $ grunt publish
-    $ ./deploy.sh
-
+---
